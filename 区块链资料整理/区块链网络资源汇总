@@ -1,0 +1,69 @@
+#1 学术网站
+网站链接：https://blockchain.ieee.org/
+简介：IEEE专门建立了一个区块链网站“IEEE BLOCKCHAIN”,专门介绍区块链标准、区块链文章、区块链技术、区块链培训等内容。网站资源较多，值得挖掘。
+
+#2 特殊资源网站-区块链账号身份识别
+网站链接：https://www.walletexplorer.com/
+简介：此网站提供比特币账号聚类功能，能够查询指定账号的聚类信息。此外，网站还根据各种辅助信息对大量比特币账号建立了身份标签。此网站的作者目前加入区块链数据公司“Chainalysis”（A轮融资1600万美元）。
+
+#3 特殊资源网站-区块链热度分析
+网站链接：https://mlab.toutiao.com/keyword/trends?keyword=%E5%8C%BA%E5%9D%97%E9%93%BE,%E4%BB%A5%E5%A4%AA%E5%9D%8A,%E6%AF%94%E7%89%B9%E5%B8%81&start=2018-12-13&end=2018-12-20&region=0&category=0
+简介：今日头条的媒体实验室模块，能够提供针对关键词的热度分析。关键词可自由组合，我填写了“区块链”、“比特币”、“以太坊”三个关键词，从图1可以看出。“区块链”的热度大约是“比特币”的两倍。“以太坊”的热度趋于0。
+![图1 区块链关键词热度对比](https://upload-images.jianshu.io/upload_images/4794066-573b68e79127acd4.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+#4 官方网站-中国社会科学院金融研究所支付清算研究中心
+网站链接：http://www.rcps.org.cn/ckwx
+简介：此网站是由中国社会科学院批准设立的所级非实体性研究单位，专门从事支付清算理论、政策、行业、技术等方面的重大问题研究。此网站目前紧密关注区块链在金融支付领域的发展，发布内容包括：区块链金融、区块链监管等。
+
+#5 区块链浏览器
+比特币浏览器
+链接：https://www.blockchain.com/
+简介：以前的域名叫blockchain.info，那时很好用。最近改域名后，网站抽风的厉害、很多页面显示不正常。
+
+以太坊浏览器
+链接：https://etherscan.io/
+简介：内容齐全，以太坊的相关内容都包括了。交易、合约、统计。
+
+综合浏览器
+链接：https://blockchair.com/
+简介：内容丰富，功能强大，包括：bitcoin,bitcoin cash,bitcoin sv,ethereum.litecoin
+
+#6 区块链网络节点查询网站
+比特币网络节点
+链接：https://bitnodes.earn.com/
+简介：运行稳定、功能完善的比特币网络节点展示网站。既有很漂亮的全球图，也有细致的列表数据。
+更重要的是，此网站开源了“比特币节点查看程序源码”，能够基于此代码开发针对性的比特币节点监测程序。
+比特币节点查看程序源码链接：
+https://github.com/ayeowch/bitnodes/wiki/Provisioning-Bitcoin-Network-Crawler
+
+以太坊网络节点
+链接：http://www.ethernodes.org/
+简介：访问速度较差，功能较少。但是是目前找到的能用的网络节点查看网站。
+
+#7 数字货币信息服务
+TradeBlock [TradeBlock.com]
+每周都会发布数字货币市场变化信息。
+
+#8 火币区块链研究院
+https://www.jianshu.com/p/e629dda1e3f1
+每周会发布非常详细的数字货币市场报告。包括价格变化、活跃度变化、节点数变化、新闻等。
+
+#9 theblock
+https://www.theblockcrypto.com/
+国外的区块链行业信息网站，内容质量较高
+
+#10 IEEE BLOCKCHAIN
+[https://blockchain.ieee.org/](https://blockchain.ieee.org/)
+IEEE专门建立了一个区块链网站“IEEE BLOCKCHAIN”,专门介绍区块链标准、区块链文章、区块链技术、区块链培训等内容。网站资源较多，值得挖掘。
+
+
+---------------------------------------------
+-更新时间：20200202
+-更新内容：添加1条信息
+-信息个数：10
+
+---------------------------------------------
+-更新时间：2019年
+-更新内容：添加9条信息
+-信息个数：9
+
