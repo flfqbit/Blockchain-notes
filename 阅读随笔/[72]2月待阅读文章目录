@@ -1,0 +1,50 @@
+此文章记录2月份将阅读分析的区块链文章。
+
+#1 Tracing Transactions Across Cryptocurrency Ledgers
+期刊名称：usenix
+发表时间：2019
+>Abstract
+One of the defining features of a cryptocurrency is that its ledger, containing all transactions that have ever taken place, is globally visible. As one consequence of this degree of transparency, a long line of recent research has demonstrated that—even in cryptocurrencies that are specifically designed to improve anonymity—it is often possible to track money as it changes hands, and in some cases to de-anonymize users entirely. With the recent proliferation of alternative cryptocurrencies, however, it becomes relevant to ask not only whether or not money can be traced as it moves within the ledger of a single cryptocurrency, but if it can in fact be traced as it moves across ledgers. This is especially pertinent given the rise in popularity of automated trading platforms such as ShapeShift, which make it effortless to carry out such cross-currency trades. In this paper, we use data scraped from ShapeShift over a thirteen-month period and the data from eight different blockchains to explore this question. Beyond developing new heuristics and creating new types of links across cryptocurrency ledgers, we also identify various patterns of cross-currency trades and of the general usage of these platforms, with the ultimate goal of understanding whether they serve a criminal or a profit-driven agenda.
+
+“even in cryptocurrencies that are specifically designed to improve anonymity—it is often possible to track money as it changes hands, and in some cases to de-anonymize users entirely.”
+加密货币能够被追踪，在某些情况下能够使用户完全去匿名。
+
+“not only whether or not money can be traced as it moves within the ledger of a single cryptocurrency, but if it can in fact be traced as it moves across ledgers”
+不仅能够实现当个账本的追踪，而且能够实现跨账本的追踪。
+
+“This is especially pertinent given the rise in popularity of automated trading platforms such as ShapeShift, which make it effortless to carry out such cross-currency trades”
+“考虑到ShapeShift等自动交易平台越来越受欢迎，这一点尤其重要，因为它们使得进行这种跨货币交易变得轻而易举。”
+
+“Beyond developing new heuristics and creating new types of links across cryptocurrency ledgers, we also identify various patterns of cross-currency trades and of the general usage of these platforms, with the ultimate goal of understanding whether they serve a criminal or a profit-driven agenda.”
+“除了开发新的启发式方法和创建跨加密货币账本的新型链接外，我们还确定了各种跨货币交易模式和这些平台的一般用法，最终目的是了解它们是为犯罪还是为利润驱动的议程服务。”
+
+
+这篇论文描述了“加密货币追踪”领域的新进展-分析跨账本之间的加密货币追踪。
+“单个账本中的加密货币追踪”已经有很多研究，典型的启发式算法“heuristics”没有太多的挖掘之处（算法固定，准确率低，实用性较差）。
+作者提出了一个新的研究思路：分析跨账本之间的货币追踪。这个思路抓住了当前加密货币场景的典型业务（不同加密货币之间的兑换）和实际的应用需求（打击犯罪）。
+
+表1 分析我之前的思路和这篇文章的差距
+序号 | 以前的论文 |  当前论文  
+-|-|-
+技术 | heuristics | heuristics,links,patterns |
+目的 | de-anonymize | criminal |
+数据 | 全部账本 | 13个月 |
+
+我之前也在此方向做了多篇论文，但是没有取得较好的效果（学术和实用性）。
+技术层面，我将重点关注在启发式算法（heuristics）上，由于这种算法准确率不高、角度太小，很难做出新的改进，所以陷入死胡同。后来，将注意力转移到网络层溯源了。这篇论文不光采用heuristics，还加入了跨账本关联技术links，以及交易模式patterns的研究，扩展了研究空间。
+
+目的层面，我将研究点聚焦在去匿名de-anonymize，这个点很有意义，但是难度太大，最后做出来的研究并不能取得较好的去匿名效果。这篇论文将关注点放在交易模式识别和犯罪活动检测上，这对准确性的要求降低，提升了实用价值，更贴近实际需求。
+
+数据层面，我之前的研究在考虑数据处理能力上（全部数据太大）浪费了很多时间，实际上从论文研究上并不需要全部数据。作者利用爬虫爬取了一个程序13月的数据，有效规避了”数据量大“这个边缘问题，从而能够将精力集中在核心问题上。
+
+这篇文章将在2月阅读，了解以下内容：
+（1）heuristics算法有何进展？
+（2）跨账本关联是如何实现的？
+（3）交易模式有哪些？
+（4）ShapeShift的数据如何获取?
+（5）把加密货币追踪的论文整理一下。
+
+
+
+
+

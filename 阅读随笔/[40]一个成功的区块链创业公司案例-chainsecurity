@@ -1,0 +1,18 @@
+#创业产品
+[https://chainsecurity.com/](https://chainsecurity.com/)
+非常好用的以太坊智能合约网站。
+比较重要的两个栏目：
+**安全报告**：
+提供了对各种知名智能合约的审计报告。包括kyber network，paxs
+[https://medium.com/chainsecurity/medium-com-chainsecurity-audits/home](https://medium.com/chainsecurity/medium-com-chainsecurity-audits/home)
+**安全检测平台**：
+提供了可免费试用的智能合约安全检测平台。平台易用性很高，检测速度很快。
+[https://secu<wbr>rify.chainse<wbr>curity.com/](https://securify.chainsecurity.com/)
+
+#创业逻辑
+智能合约是区块链落地的关键技术，代码安全则是智能合约走向实用的核心要求。为区块链应用提供安全监测方案和项目检测方案，为区块链开发者提供安全监测工具，这将是一个非常好的“卖铲子”项目（新的金矿被发现后，大量的人去淘金，给这些人买淘金工具的人通常能够稳赚不赔）。根据网站上的宣传，审计费用已经超过3亿美元，已经完成大量知名合约的审计工作。这是一个很成功，而且有持续造血能力的公司。
+
+#技术门槛
+从公司团队的介绍上看，大部分核心成员都来自瑞士理工大学，两2名博士，及多名硕士。主要研究方向是：automated security analysis and verification；symbolic verification of smart contracts。
+从技术门槛上看，智能合约安全检测背后所需的形式化验证、安全分析等技术具有较高的学术门槛和技术门槛，很难被轻易替代。
+从团队结构上看，创始团队大部分都是瑞士苏黎世大学，从学术方向看应该是一个实验室的。这种团队结构很具有示范性。

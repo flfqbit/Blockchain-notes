@@ -1,0 +1,51 @@
+https://bitzuma.com/posts/op-return-and-the-future-of-bitcoin/
+描述了opreturn参数的发展历史和未来展望
+
+Validation scripts offer an obvious method for encoding application-specific data, but other techniques have been used. For example,?one scheme?stored data by writing it into two payment addresses.
+历史上曾经有提议，将数据存储在地址中
+
+A more serious concern stems from the need to keep application-specific data within the unspent transaction output (UTXO) set. The UTXO set contains references to all spendable coins, and so should be kept small to ensure fast transaction validation. Embedding application data into addresses or challenge scripts forces each full node to add a reference to the UTXO set.
+UTXO数据集需要尽量小，以便提高交易验证效率。
+将数据内嵌在地址或脚本中，将使得所有全节点维护的UTXO数据集中增加引用数量。
+这句话的核心是，将数据存储在地址和签名中的行为，有可能使这笔交易成为不可执行的交易，即永久性增加UTXO的数据，这将对整个系统的验证效率产生潜在威胁。
+
+challenge scripts 猜测是指交易输出信息中的数据，用于存储脚本的。
+
+https://davidederosa.com/basic-blockchain-programming/scripts-in-transaction-processing/
+介绍比特币的脚本
+
+比特币的输入和输出中都有脚本
+output script
+-the amount of bitcoins to transfer
+-a script
+input script
+-an outpoint reference to the previous transaction output	(oupoint <tx1, output>)
+-a script
+
+UTXO (unspent transaction output)数据集被矿工维护，以便能够快速验证交易合法性，防止双花现象。
+
+Although stored in the block chain,?OP_RETURN?bytes are excluded from the UTXO set, conserving a scarce resource. As a side effect, an output using an?OP_RETURN?challenge script becomes unspendable. For this reason, the value of an?OP_RETURN?output is usually set to 0.
+
+OP_RETURN不属于UTXO数据集。
+OP_RETURN脚本存储在一个output中，金额为0。
+
+However, a 40 byte sequence more than suffices to encode an identifier such as a hash value. This value can uniquely represent any digital document, from an image, to a poem, to an abstract data structure. Embedded hash values in turn offer a method to link the block chain to other data stores such as?distributed hash tables.
+40字节足够存储1个哈希值。这个哈希值可以唯一代表任意一个数字文件，从图片到文字到数据结构。
+内嵌的哈希值可以将区块链连接到任意存储文件。
+
+The?Bitcoin Core 0.9.0 release notes?attempted to clarify the purpose of?OP_RETURN:
+0.9.0版本正式定义了op_return参数
+
+Stealth addresses offer another example of?OP_RETURN?in action. This scheme enables payments to be received without publicly revealing the receiver’s public key or address. Data needed to make this system work are encoded within a call to?OP_RETURN. In essence, Bitcoin does double duty as a secure messaging protocol.
+
+
+Transactions using?OP_RETURN?can be monitored via?Coin Secrets.
+http://coinsecrets.org/ 这个网站专门记录比特币op_return参数中存储的数据。
+http://api.coinsecrets.org/block/353197?where?353197?is a bitcoin block number.
+这个网站提供的API参数可以查看每个区块中存储的opreturn数据。
+之后介绍op_return时，可以引用这里的数据。
+
+https://bitzuma.com/posts/op-return-and-the-future-of-bitcoin/ 这篇文章介绍op_return很详细。
+
+
+

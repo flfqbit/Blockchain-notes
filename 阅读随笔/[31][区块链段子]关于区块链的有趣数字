@@ -1,0 +1,158 @@
+#10%
+2015年，世界经济论坛（WORLD ECONOMIC FORUM）发布的报告《Deep Shift Technology Tipping Points and Societal Impact》预测，截止到2025年全世界**10%**的GDP将存储在区块链上。
+报告链接：
+https://www.weforum.org/reports/deep-shift-technology-tipping-points-and-societal-impact
+
+#228位
+荷兰数学家Hendrik Lenstra提出一种简明的比较密码算法安全性的方法：通过计算攻破一个密码学算法需要的能量数量，并把它与水沸腾需要多少能量对比，来衡量一个加密算法的安全性。
+经过他的分析，破解一个228位的 RSA 密钥需要的能量少于煮沸一汤勺水的能量。而破解一个228位的椭圆曲线密钥需要足够煮沸地球上所有水的能量（**比特币、以太坊等区块链系统通常采用256位的椭圆曲线密码**）。
+相关链接：https://prateekvjoshi.com/2014/07/12/elliptic-curve-cryptography-part-44-how-do-we-use-elliptic-curves/
+
+#10^80
+比特币私钥空间的大小是2^256 ，这是一个非常大的数字。用十进制表示的话，大约是10^77 ，而可见宇宙被估计只含有10^80 个原子。
+来源于电子书：mastering bitcoin
+电子书链接：https://github.com/bitcoinbook/bitcoinbook
+
+#10亿 -- 5116万
+目前，在发展中国家至少有10亿人没有任何形式的正式身份标志。
+W. B. Group, “Digital identity : towards shared principles for
+public and private sector cooperation,” no. July, pp. 1–44, 2016.
+截止到2018年12月23日，以太坊网络中的账号个数超过5116万。
+数据来源：https://etherscan.io/chart/address
+
+
+
+#64亿
+2018年4月，数字货币美链（BEC）的智能合约被黑客利用代码漏洞进行攻击，一天之间损失了64亿人民币的市值。
+相关链接：https://baijiahao.baidu.com/s?id=1599034807067855966&wfr=spider&for=pc
+
+#10分钟 -- 15秒
+比特币10分钟产生1个区块，每秒钟理论执行7笔交易。
+以太坊15秒产生一个区块，每秒钟理论执行25笔交易。
+
+#12.5 * 10^18（FLOPS） -- 39.36*10^18（hash/s）
+2016年6月20日，中国超级计算机“神威·太湖之光”连续第七次荣登全球最快超级计算机排名（TOP500）榜首。系统的峰值性能达到每秒12.5亿亿次、持续性能为每秒9.3亿亿次、系统能效比高达每瓦特60.5亿次。
+12.5 * 10^18 （FLOPS），即每秒执行12.5*10^18个浮点运算。
+
+2018年12月24日，blockchain.info网站显示，比特币网络的Hashrate（全网每秒计算hash的数量）约为39.36 EH/s=39.36*10^18 （hash/s）。
+39.36 * 10^18 （hash/s），即每秒计算39.36*10^18个哈希。
+
+#20,089美元 -- 3,597.92美元
+2017年12月17日，比特币单价最高点20,089美元。
+2018年12月17日，比特币单价最高点3,597.92美元。
+数据来源：https://coinmarketcap.com/currencies/bitcoin/historical-data/?start=20160428&end=20181224
+
+#1,432.88美元 -- 85.34美元
+2018年1月13日，以太币单价最高点1,432.88美元。
+2018年12月15日，以太币单价最高点85.34美元。
+数据来源：
+https://coinmarketcap.com/currencies/ethereum/historical-data/?start=20160428&end=20181224
+
+#168827只代币
+以太坊巅峰市值突破1300亿美元
+据etherscan.io统计，当前共有168827只代币基于以太坊ERC20代币合约，
+另外还有1108只代币基于以太坊ERC721代币合约。
+
+#“税链”的成果
+98万户
+9400万发票 （750亿发票）
+数据来源：2019年2月22日，蚂蚁金服区块链竞赛选举活动
+
+#5% 15% 4万亿
+世界经济论坛在2013年的一项研究表明，在国际贸易过程中，减少机构事务部门的摩擦会将GDP提高5个百分点，将贸易额提高15个百分点。全球GDP总额超过80万亿美元，这就意味着我们所讨论的是超过4万亿美元规模的影响。这从任何角度来讲都是非常可观的。
+数据来源：
+【忘掉比特币，来挖掘区块链的最大机遇！ - 今日头条】https://m.toutiaocdn.cn/group/6664022466857271820/?iid=54998425773&app=news_article&timestamp=1551659780&group_id=6664022466857271820&tt_from=copy_link&utm_source=copy_link&utm_medium=toutiao_ios&utm_campaign=client_share
+
+#交易安全确认时间，bitcoin6个区块，ethereum37个区块
+比特币出块时间：**60秒**
+以太坊出块时间：**10-20秒**
+针对一个拥有30%算力的敌手，比特币交易通常需要等待**6**个区块确认才能保证交易安全性；为了达到相同的安全效果，以太坊需要等待**37**个区块确认；莱特币28个；狗狗币47个。
+数据来源：
+2016-ACM SIGSAC-On the Security and Performance of Proof of Work Blockchains
+
+#比特币性能，比特币交易的理论峰值7tps
+出块时间：10分钟
+块容量：1MB
+交易平均大小：250B
+交易性能：7tps
+**交易性能=块容量/交易平均大小/出块时间**
+              =1024*1024/250/600
+              =7
+
+数据来源：
+2016-ACM SIGSAC-On the Security and Performance of Proof of Work Blockchains
+-Bitcoin relay network-http://bitcoinrelaynetwork.org/
+
+
+
+#比特币性能，600S，1MB，7tps，60tps
+比特币早期的性能参数，每**10分钟**生成一个容量为**1MB**的区块.
+研究人员发现，在区块大小为**1MB**的条件下，将出块时间缩短到**1分钟**，将不会对安全性产生重大影响。因此，比特币系统的TPS有潜力从当前的**7tps**提升到**60tps**。
+
+数据来源：
+2016-ACM SIGSAC-On the Security and Performance of Proof of Work Blockchains
+
+
+#区块传播时间，8.7s，05-0.75s
+比特币系统中区块传播的时间中位数：8.7s
+以太坊系统中区块传播的时间中位数：05-0.75s
+
+数据来源：
+2016-ACM SIGSAC-On the Security and Performance of Proof of Work Blockchains
+2016-On scaling decentralized blockchains
+-ethstats-https://ethstats.net/
+
+#支付宝每秒8.59万笔交易峰值
+支付宝：8.59万笔/ 秒（实测峰值）
+visa:1.4万笔/秒（实测峰值），5.6万笔/秒(实验室数据)
+MasterCard：4万笔/ 秒(实验室数据)
+比特币：7笔/ 秒
+libra:1000万笔/ 秒
+
+数据来源：
+[http://www.mpaypass.com.cn/news/201511/11092649.html](http://www.mpaypass.com.cn/news/201511/11092649.html)
+
+
+#1988-1992-1997-1998-2008
+比特币的先驱。
+比特币的技术不是凭空创造的，而是建立在大量研究人员的持续创新和积累。很多技术在创造时并没有产生巨大的影响，比特币将这些技术有机组合，实现了巨大的技术进步。
+
+**密码技术：**
+ECC
+SHA
+
+**共识技术：**
+POW：
+1992-C. Dwork and M. Naor-Pricing via processing or combatting junk mail
+2004-B. Laurie and R. Clayton-Proof-of-work proves not to work
+2005-J. Aspnes-Exposing computationally-challenged Byzantine impostors
+
+**电子货币：**
+ECASH：
+1988-Chaum-Untraceable Electronic Cash
+1999-T. Sander-Auditable, anonymous electronic cash
+2001-T. Sander-Blind, auditable membership proofs
+
+B-money:
+1998-W. Dai-b-money. www.weidai.com/bmoney.txt
+
+Bitcoin:
+2008-S. Nakamoto-Bitcoin: A Peer-to-Peer Electronic Cash System. http://bitcoin.org/bitcoin.pdf
+
+**智能合约Smart contracts**
+1997-N. Szabo-Formalizing and securing relationships on public networks
+
+#区块链在跨境汇款中的潜力
+区块链在跨境汇款中将显著降低汇款手续费和到帐时间。
+
+下图是传统银行跨境汇款的手续费数据
+![082202.jpg](https://upload-images.jianshu.io/upload_images/4794066-6f3c5e8586bfdcf5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+数据来源：
+[https://www.jianshu.com/p/ca821762a80c](https://www.jianshu.com/p/ca821762a80c)
+
+#20万ERC20
+截止到2019年8月23日，以太坊平台上基于ERC20协议的代币数量超过20万个（207,730）
+
+数据来源：
+[https://etherscan.io/tokens](https://etherscan.io/tokens)

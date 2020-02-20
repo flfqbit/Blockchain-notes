@@ -1,0 +1,137 @@
+&emsp;&emsp;今天在今日头条的问答栏目回答了一个问题：
+&emsp;&emsp;"在密码学里，是如何重新定义私有财产的？"
+&emsp;&emsp;我的答复是：
+&emsp;&emsp;“目前区块链技术的典型应用是数字货币应用，包括比特币、以太坊，以及其他的多种多样的“数字货币”。这些“数字货币”虽然不被认可为货币，但是通常被认为是有价值的虚拟资产（私人财产）。
+&emsp;&emsp;如何证明一个比特币是某个人的私有资产了？简单理解，每一个比特币都隶属于一个“区块链账号”，拥有此“区块链账号”对应密钥的用户就可以使用这个比特币。这种机制类似于银行卡和银行卡对应的密码，持有密码的人可以取出银行卡中的钱。不同之处在于，银行卡的账号和密码是保存在银行的中心服务器上，验证身份时只需要用户输入的密码和数据库中的密码匹配即可。但是在比特币等区块链系统中，不存在中心化机构，即没有地方存储账号和密码的对应关系。这种情况下，如何验证资产所属的身份？
+&emsp;&emsp;这里就是用了密码学中的“非对称加密”技术和“数字签名”技术。比特币的账号本质上是由“非对称加密”算法生成的“公钥”，此账号对应的“密码”是“公钥”对应的“私钥”。验证资产所属身份的方法是：验证者利用公开的“公钥”去验证资产所有者提供的、对应特定比特币的数字签名。只要签名正确，即认可用户是此比特币的所有者。这种模式，不需要验证者知道账号对应的私钥，因此能够从根本上保证私有财产的所有权（传统银行模式中，银行可以冻结任意账号的资金，用户的私有财产的所有权是受限制的）。”
+&emsp;&emsp;上述答复中涉及了区块链账号背后的非对称加密算法和数字签名算法。这里重点介绍目前大多数区块链系统采用的ECC非对称加密算法和ECDSA数字签名算法。
+&emsp;&emsp;**ECC算法**：是目前广泛使用的非对称加密算法（另外一种著名的非对称加密算法RSA，由于安全性较弱，已经逐渐淘汰了）。“非对称”是指此算法中加密和解密所用的密钥不同。此算法中的密钥是成对出现的，即（公钥，私钥）。公钥加密、私钥解密；私钥加密，公钥解密。通常情况下，用户的公钥是公开的，用于代表用户的数字身份；私钥是由用户私密保存，可以用于证明用户对特定公钥的所有权。正式基于这种特征，区块链技术采用ECC算法作为区块链账号的生成技术。我们通常看到的比特币账号、以太坊账号就是在ECC算法生成公钥的基础上，经过格式转换得到的。用户如果想使用某个比特币账号中的比特币资产，就必须使用账号对应的私钥进行身份验证操作。所以，比特币资产的所有权全部依赖于私钥信息，一旦私钥丢失或泄露，用户将永久丧失对应比特币资产的所有权。据报道，比特币系统中已经有20%的比特币的密钥永久丢失，这些资产将成为永久锁定的冰冻资产。
+&emsp;&emsp;**ECDSA算法**:是一种数字签名算法。主要用途是，用户利用私钥对特定数据进行签名，得到签名信息（一种密码学操作）；验证者利用此用户公布的公钥验证签名信息和特定数据是否匹配，如果匹配，就证明用户对公钥具有所有权。数字签名算法在互联网中广泛使用，包括HTTPS协议，银行卡U盾等等。数字签名算法通常用于身份认证和数据完整性认证。在区块链中，用户发起的每笔交易都包含用户的数字签名，网络中的验证节点通过验证签名信息，判断用户是否有权利发起这笔交易。
+![图1 数字签名算法](https://upload-images.jianshu.io/upload_images/4794066-c0167245dc731b1a.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+&emsp;&emsp;为了更详细介绍ECC算法和ECDSA签名算法，将通过一段代码演示密钥生成过程和签名、验证过程。
+```
+func generateNewPK() (string, error)  {
+	var err error
+	//（1）根据randKey长度，使用相应的加密椭圆参数
+	length := len([]byte(randKey))
+	if length < 224/8 {
+		fmt.Println("The length of Rand Key is too small, Crypt init failed, Please reset it again !")
+		return "", err
+	}
+	if length >= 256/8+8 {
+		curve = *bitelliptic.S256()
+	} else if length >= 224/8+8 {
+		fmt.Println("Rand length =", length, "Using 244 level !")
+		curve = *bitelliptic.S224()
+	}
+	//（2）创建密匙对
+	//私钥是随机生成的
+	prk, err = bitecdsa.GenerateKey(&curve, rand.Reader)
+	if err != nil {
+		fmt.Println("Crypt init fail,", err, " need = ", curve.BitSize)
+		return "", err
+	}
+	//（3）公钥是基于私钥生成的
+	puk = prk.PublicKey
+
+	//ECC中的公钥分为两个部分，通常将部分拼接在一起
+	return puk.X.String()+puk.Y.String(), nil
+}
+```
+&emsp;&emsp;上述代码的功能是生成一个基于ECC算法的密钥对（puk,prk），其中“puk”代表公钥，”prk”代表私钥。
+&emsp;&emsp;代码中的第（1）个提示，用于解释此处需要根据参数的长度选择相应的“椭圆曲线参数”。（椭圆曲线是ECC算法依赖的数学基础）。不同的椭圆曲线参数将得到不同的效果的加密算法。比特币等数字货币通常采用256位的椭圆曲线。
+&emsp;&emsp;代码中的第（2）个提示，展示了私钥”prk”的生成过程，可以看到”prk”是利用 ”bitecdsa.GenerateKey”函数，在两个参数(&curve, rand.Reader)的作用下生成的。”bitecdsa”是一个实现了ECDSA算法的开源代码，”GenerateKey”是其中用于生成密钥对的函数；”&curve”是在上部分代码中生成的椭圆曲线；”rand.Reader”是一个随机数。
+&emsp;&emsp;代码中的第（3）个提示展示了，公钥”puk”是有私钥”prk”生成的。
+上述代码与比特币、以太坊中负责账号生成的代码基本一致。区别在于，上述代码只是得到了公钥和私钥。在比特币等区块链系统中，区块链账号是在公钥的基础上进一步加工获得。
+```
+func Sign_t(text string) (string, error) {
+	//（1）签名过程
+        //输入包括：随机数，私钥，待签名数据
+	//输出包括2个参数，r 和 s 。都是签名信息的中间数据
+        r, s, err := bitecdsa.Sign(rand.Reader, prk, []byte(text))
+	if err != nil {
+		return "", err
+	}
+	rt, err := r.MarshalText()
+	if err != nil {
+		return "", err
+	}
+	st, err := s.MarshalText()
+	if err != nil {
+		return "", err
+	}
+	var b bytes.Buffer
+	w := gzip.NewWriter(&b)
+
+	//（2）生成最终的签名信息
+        //输入是r 和 s的格式变换版本 rt 和 st
+       //输出是签名信息 b
+	defer w.Close()
+	_, err = w.Write([]byte(string(rt) + "+" + string(st)))
+	if err != nil {
+		return "", err
+	}
+	w.Flush()
+
+	return hex.EncodeToString(b.Bytes()), nil
+}
+```
+&emsp;&emsp;代码中的第（1）个提示，介绍了签名函数的结构。”bitecdsa.Sign”是ECDSA开源代码的签名函数。输入包括：随机数，私钥”prk”，待签名数据；输出包括2个参数，r 和 s ，这是签名信息的中间数据。
+&emsp;&emsp;代码中的第（2）个提示，介绍最终版签名信息的生成过程。
+```
+func Verify_t(testString string, signString string) (bool, error) {
+	byterun, err := hex.DecodeString(signString)
+	if err != nil {
+		return false, err
+	}
+	//（1）解密出验证所需的两个参数 rint, sint
+	rint, sint, err := getSign_t(byterun)
+	if err != nil {
+		return false, err
+	}
+	//（2）验证签名是否正确
+        //输入包括：公钥、待签名字符串、从签名信息中提取的两个参数”&rint, &sint”
+	result := bitecdsa.Verify(&puk, []byte(testString), &rint, &sint)
+	return result, nil
+}
+```
+&emsp;&emsp;代码中的第（1）个提示，介绍了从签名信息中提取出验证所需的两个参数”&rint, &sint”
+&emsp;&emsp;代码中的第（2）个提示，介绍验证签名的过程。”bitecdsa.Verify”是ECDSA开源代码的验证签名的函数。输入包括：公钥，待签名字符串、从签名信息中提取的两个参数”&rint, &sint”。
+&emsp;&emsp;从上述3个代码基本上可以了解所谓的区块链账号生成、区块链交易签名、区块链签名验证的底层逻辑。
+&emsp;&emsp;此处重点介绍的是第一段代码中的这句代码：
+&emsp;&emsp;“curve = *bitelliptic.S256()”
+&emsp;&emsp;这句代码的含义是利用ECDSA开源代码获取“S256”的椭圆曲线参数。通过代码跳转，查看S256()的代码如下：
+```
+func initS256() {
+	// （1）See SEC 2 section 2.7.1
+	secp256k1 = new(BitCurve)
+	secp256k1.P, _ = new(big.Int).SetString("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F", 16)
+	secp256k1.N, _ = new(big.Int).SetString("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141", 16)
+	secp256k1.B, _ = new(big.Int).SetString("0000000000000000000000000000000000000000000000000000000000000007", 16)
+	secp256k1.Gx, _ = new(big.Int).SetString("79BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798", 16)
+	secp256k1.Gy, _ = new(big.Int).SetString("483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B8", 16)
+
+	secp256k1.BitSize = 256
+}
+```
+&emsp;&emsp;如代码所示，椭圆曲线的参数主要是5个（P,N,B,GX,GY）。这5个参数定位了椭圆曲线的基本特征，决定了上层加密算法的具体操作过程。
+&emsp;&emsp;代码中的第（1）个提示，介绍了此椭圆曲线参数来自于“ SEC 2 section 2.7.1”，这是由Certicom（成立于1998年的密码团体）发布的加密算法参数推荐文档，目前已经被美国国家安全局（National Security Agency，简写为NSA）等众多政府、企业机构认可。
+文档链接：http://www.secg.org/sec2-v2.pdf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

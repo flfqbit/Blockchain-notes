@@ -1,0 +1,44 @@
+【**题目**】：Anonymous Alone? Measuring Bitcoin’s Second-Generation Anonymization Techniques
+**【出版社-时间**】: EuroS&P-2017
+【**内容简介**】
+**针对的问题：**比特币金融交易的匿名性存在缺陷
+**提出的方法：**文章介绍了一种不需要信任某个单独实体，同时能够支持比特币的交易匿名技术。通过调研并比较四种已知的技术后，提出了针对比特币的二代匿名技术。作者的实验从88 GB的区块链中提取和解析1亿3900万比特币交易，存储在Neo4j的图结构数据库中便于高效查询。
+**达到的效果：**降低用户资金风险，有效防止反匿名
+
+【**题目**】：Bitcoin over Tor isn’t a good idea
+【**出版社**-**时间**】: S&P-2015
+【**内容简介**】
+**针对的问题：**目前的比特币系统中，用户拥有地址虽然是随机生成的，但是这种地址的匿名程度仍然太低
+**提出的方法：**针对基于TOR网络的比特币隐私保护方法，提出一种攻击机制。
+**达到的效果：**攻击者可以在资源很少的条件下，得到并控制tor网络中所有使用比特币的用户之间的信息流。攻击者可以把用户的交易连接起来，控制或者对与用户相连的区块和交易进行篡改。不仅如此，作者展示了攻击者可以在用户决定要直接连接到比特币的时候，通过电子指纹识别出用户的IP地址。
+
+【**题目**】：Design of a Privacy-Preserving Decentralized File Storage with Financial Incentives
+【**出版社**-**时间**】: EuroS&P-2017
+【**内容简介**】
+**针对的问题：**用户担心存在云平台的数据面临隐私泄露威胁
+**提出的方法：**通过将分布式存储和区块链相结合，并采用环签名、一次性地址等技术，实现支持隐私保护的云存储系统。新的方案在保护用户隐私的同时还能够起到激励用户的作用。
+**达到的效果：**遵循隐私设计策略，通过整个系统生命周期来达到隐私保护。此系统能够实现与最先进的分布式存储技术相媲美的隐私水平。
+
+|类型|论文|备注|
+|:--|:--|:--|
+|	攻击方法	|	GOE12_CCS_Double-Spending Fast Payments in Bitcoin.	|	研究双花攻击在比特币中的可能性，设计一种检测双花攻击的机制	|
+|	攻击方法	|	EAA+15_USENIX security_Eclipse attacks on Bitcoin's peer-to-peer network	|	比特币日蚀攻击	|
+|	攻击方法	|	AHG+15_CCS_Tampering with the Delivery of Blocks and Transactions in Bitcoin	|	研究针对比特币的攻击机制，可以篡改比特币区块或者交易的传播。造成双花或者提供挖矿成功率。	|
+|	攻击方法	|	KSA+16_S&P_Stubborn Mining: Generalizing Selfish Mining and Combining with an Eclipse Attack	|	针对比特币共识机制的攻击。结合自私挖矿和日蚀攻击获得更利润	|
+|	共识机制安全性	|	AGV+16_CCS_On the Security and Performance of Proof of Work Blockchains	|	研究POW机制的安全性，在考虑网络状态、区块大小、信息传递机制等多种变量的条件下分析双花攻击，自私挖矿，日蚀攻击的情况。设计一种评价模型，比较比特币、莱特币、以太坊等币种的安全性	|
+|	共识机制安全性	|	AAJ+15_CCS_Nonoutsourceable Scratch-Off Puzzles to Discourage Bitcoin Mining Coalitions	|	分析比特币挖矿中存在的安全问题。攻击者可以在矿池中获得额外利润。	|
+|	共识攻击	|	YDY17_CCS_Be Selfish and Avoid Dilemmas: Fork After Withholding (FAW) Attacks on Bitcoin	|	针对比特币POW机制的攻击方法。基于BWH攻击进行改进，攻击者能够获得更多利润，而且FAW攻击能够打破BWH攻击中存在的纳什均衡，份额越高的矿池将获得更多的收益。	|
+|	共识机制安全性	|	MHM+16_CCS_On the instability of Bitcoin without the block reward	|	研究在没有区块奖励的情况下比特币是不安全的，攻击者可以通过分叉获得额外的收益。	|
+|	防御方法	|	TA15_CCS_Liar, Liar, Coins on Fire! --- Penalizing Equivocation By Loss of Bitcoins?	|	提供一种基于比特币的可证断言，可以对双花行为进行惩罚	|
+|	攻击方法	|	EAB+15_USENIX_Eclipse Attacks on Bitcoin’s Peer-to-Peer Network 	|	文章在比特币的点对点网络上提出日食攻击，通过概率分析，蒙特卡罗模拟，实时比特币节点的测量和实验来量化攻击中涉及的资源，最后，作者提出了受僵尸网络架构启发的对策，旨在提高日食攻击的阻力。	|
+|	攻击方法	|	KKK+16_EC_Blockchain Mining Games	|	两种挖矿攻击方式	|
+|	共识安全	|	LJC17_Future Generation Computer Systems_A survey on the security of blockchain systems	|		|
+|	攻击方法	|	PR16_Electronic Notes in Theoretical Computer Science_Double-spend Attack Models with Time Advantange for Bitcoin	|	共识攻击	|
+|	攻击方法	|	JLG+14_Financial Cryptography and Data Security_Game-Theoretic Analysis of DDoS Attacks Against Bitcoin Mining Pools	|	共识攻击	|
+|	共识机制安全性	|	JAN17-1-The Bitcoin Backbone Protocol	|	简化条件下的安全证明	|
+|	共识机制安全性	|	RLA16-2-Analysis of the Blockchain Protocol in Asynchronous Networks	|	异步环境的安全证明	|
+|	共识机制安全性	|	JAN16-3-The Bitcoin Backbone Protocol with Chains of Variable Difficulty	|	可变难度的安全证明	|
+
+
+
+

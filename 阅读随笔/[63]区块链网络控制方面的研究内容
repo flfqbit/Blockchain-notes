@@ -1,0 +1,22 @@
+区块链网络控制
+
+以比特币为代表的区块链网络核心的特征是自组织、去中心，具有匿名性强、抗网络攻击能力强的特点。研究区块链网络的特性对于了解区块链运行机理、研究区块链监管技术、改善区块链系统性能有重要意义。建议的研究点包括：
+（1）深入研究典型区块链网络的特点，分析其节点构成、网络分布、自治通信机理，全球流量分布特征。
+（2）深入研究区块链网络匿名性的原理，存在的缺陷和可能的改进方式。
+（3）深入研究区块链网络自治性的原理，分析不同节点之前解决问题的沟通方式，共识机制的作用，软分叉、硬分叉机制。
+
+区块链网络论文
+-Research and Challenges on Bitcoin Anonymity
+-The Bitcoin P2P Network
+-Analyzing the deployment of Bitcoin's P2P network under an AS-level perspective
+-An Analysis of Anonymity in Bitcoin Using P2P Network Traffic
+-Deanonymisation of Clients in Bitcoin P2P Network
+-2013-Information propagation in the bitcoin network.pdf
+-Behavior pattern clustering in blockchain networks
+-区块链技术发展现状与展望
+-SoK_ Research Perspectives and Challenges for Bitcoin and Cryptocurrencies
+-An Analysis of Anonymity in Bitcoin Using P2P Network Traffic
+-Bitcoin A Peer-to-Peer Electronic Cash System-中本聪的论文
+
+
+

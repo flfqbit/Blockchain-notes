@@ -1,0 +1,24 @@
+&emsp;&emsp;区块链是分布式数据存储、点对点传输、共识机制、加密算法等计算机技术的新型应用模式，具有去中心、去信任、集体维护和可靠数据库等特性。
+![图1 区块链技术的优点](https://upload-images.jianshu.io/upload_images/4794066-2348176a47a7bf36.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+区块链的突出优势，能够在军事领域发挥重大作用。
+![图2 区块链在军事领域的作用](https://upload-images.jianshu.io/upload_images/4794066-1ed70f8654b6f176.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![图3 美国国防部高级研究计划局（DARPA）](https://upload-images.jianshu.io/upload_images/4794066-4a6b75c9d627c940.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+&emsp;&emsp;根据美国国防部的需求，美国国防部高级研究计划局（DARPA)正在研究利用区块链技术创建一个安全的消息传输与交易平台，使任何人在任何地方都能够安全的发送信息。
+&emsp;&emsp;DARPA向Guardtime（爱沙利亚区块链公司)授予了180万美元的合同，用于构建其区块链无钥签名基础设施KSI。用于保护关键武器系统的安全性，检测和对抗高持续性威胁（APT）
+![图3 传统的PKI/CA与基于区块链的KSI](https://upload-images.jianshu.io/upload_images/4794066-149eb55d6b950868.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+REMME项目的目标是通过创建没有任何密码的唯一身份验证系统来解决此问题。基于密码学和分布式分类器技术（DLT），该解决方案设计为过时，同时为普通用户保留了便利性。 
+官网：[https://remme.io/](https://remme.io/)
+介绍：[https://www.zuocoin.com/a/news/experience/2018/1030/3289.html](https://www.zuocoin.com/a/news/experience/2018/1030/3289.html)
+[https://zhuanlan.zhihu.com/p/33449702](https://zhuanlan.zhihu.com/p/33449702)
+
+
+相关文献：
+[1]廉 蔺, 朱启超, 赵 炤. 区块链技术及其潜在的军事价值[J]. 国防科技, 2016, 37(2).
+[2]DARPA and Advancing Cybersecurity Infrastructure With Blockchain. URL:https://www.nasdaq.com/article/darpa-and-advancing-cybersecurity-infrastructure-with-blockchain-cm783507
+
+
