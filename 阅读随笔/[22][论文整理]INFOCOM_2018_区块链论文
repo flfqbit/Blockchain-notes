@@ -1,0 +1,62 @@
+&emsp;&emsp;INFOCOM是通信网络领域的旗舰性会议。每年一届，每届约录用250到300篇文章，录用率一般保持在18%。作为全世界范围内的顶级学术为会议，被录用论文代表了技术的前沿方向和热门领域。
+&emsp;&emsp;2018年，INFOCOM会议收录文章列表链接：
+http://infocom2018.ieee-infocom.org/program/accepted-paper-list-main-conference
+&emsp;&emsp;本次会议接收论文总数是308篇，其中区块链相关论文4篇（国内高校发表的区块链论文有3篇）。
+&emsp;&emsp;目前，INFOCOM2018的录用论文已经全部可以从IEEE官方网站(https://ieeexplore.ieee.org/Xplore/home.jsp)查看和下载（下载需要有注册账号，通常高校和研究所会统一购买版权）。
+&emsp;&emsp;此处，针对这4篇论文的摘要部分进行记录和分析。
+
+##1 CertChain_ Public and Efficient Certificate Audit Based on Blockchain for TLS Connections
+Jing Chen and Shixiong Yao **(Wuhan University, P.R. China)武汉大学**; Quan Yuan (University of Texas-Permian Basin, USA); Kun He (Wuhan University, P.R. China); Shouling Ji (Zhejiang University, P.R. China & Georgia Institute of Technology, USA); Ruiying Du (Wuhan University, P.R. China)
+https://ieeexplore.ieee.org/document/8486344
+>Abstract:
+In recent years, real-world attacks against PKI take place frequently. For example, malicious domains' certificates issued by compromised CAs are widespread, and revoked certificates are still trusted by clients. In spite of a lot of research to improve the security of SSL/TLS connections, there are still some problems unsolved. On one hand, although log-based schemes provided certificate audit service to quickly detect CAs' misbehavior, the security and data consistency of log servers are ignored. On the other hand, revoked certificates checking is neglected due to the incomplete, insecure and inefficient certificate revocation mechanisms. Further, existing revoked certificates checking schemes are centralized which would bring safety bottlenecks. In this paper, we propose a blockchain-based public and efficient audit scheme for TLS connections, which is called Certchain. Specially, we propose a dependability-rank based consensus protocol in our blockchain system and a new data structure to support certificate forward traceability. Furthermore, we present a method that utilizes dual counting bloom filter (DCBF) with eliminating false positives to achieve economic space and efficient query for certificate revocation checking. The security analysis and experimental results demonstrate that CertChain is suitable in practice with moderate overhead.
+
+&emsp;&emsp;这是一篇利用区块链技术解决实际应用问题（PKI-CA机制安全性）的研究文章，隶属于“区块链应用”类别。
+&emsp;&emsp;PKI-CA（公钥基础设施）是数字证书发放和维护的基础协议，是现代互联网安全的基础设施。PKI-CA的主要工作是根据申请，向用户发放数字证书，并将证书信息和用户信息记录在证书库（中心化存储系统）中。持有数字证书的用户将具备由发行方能够赋予的身份信息，从而可以执行各种具有高信任需求的业务（例如，银行卡转账）。当用户证书过期，或者用户进行了违法活动时，PKI-CA的管理机构将撤销对应的数字证书，并将撤销信息记录在撤销证书库（中心化存储系统）。验证数字证书合法性的机构通过定期访问撤销证书库获得撤销证书信息，从而阻止非法证书的使用。
+&emsp;&emsp;上述PKI-CA在现实生活中广泛使用，但是依然存在一些实际问题。首先，PKI-CA管理机构本身的安全性问题，由于传统的PKI-CA是中心化的，当遭受网络攻击时，有可能影响证书安全性。其次，传统PKI-CA的证书撤销机制是通过在中心化的撤销证书库中添加撤销记录来实现的。这使得针对撤销证书的检测过程必须经过两个时间延迟：中心化证书库添加撤销记录；验证方同步撤销记录。这种基于中心化架构的协作机制很容易面临攻击威胁。
+&emsp;&emsp;作者针对这种需求，提出了一种基于区块链的公开、高效的证书认证机制。作者的主要贡献包括：提出来一种基于可靠性等级的共识机制；设计一种支持可追溯证书转发的数据结构；提出了一种基于dual counting bloom filter (DCBF)的消除假阳性的方法，从而实现对证书撤销检查的经济空间和高效查询。
+利用区块链技术实现身份认证是一项比较热门的研究领域。由于区块链技术具备去中介信任的优势，非常适合在分布式环境下实现高可信度、高协作性的身份认证，能够有效避免单点崩溃、网络攻击等传统认证方式面临的风险。
+&emsp;&emsp;本文比较有趣的地方包括2点：
+&emsp;&emsp;（1）提出了一种基于公有链的认证机制，而且在实际应用中是可行的，开销适中（摘要内容）。目前很多认证项目都是基于联盟链的，而且可行度不高。这篇文章的实验方案值得借鉴。
+&emsp;&emsp;（2）提出了一种基于可靠性等级的共识机制。猜测是一种类似于POS的机制，即根据可靠性（类似于POS中的权益）来决定投票影响力，主要目的是实现高效共识。
+
+
+##2 Searching an Encrypted Cloud Meets Blockchain_ A Decentralized, Reliable and Fair Realization
+Shengshan Hu**(Wuhan University, P.R. China)武汉大学**; Chengjun Cai (City University of Hong Kong, Hong Kong); Qian Wang (Wuhan University, P.R. China); Cong Wang (City University of Hong Kong, Hong Kong); Luo Xiangyang (Zhengzhou Information Science and Technology Institute, P.R. China); Kui Ren (State University of New York at Buffalo, USA)
+https://ieeexplore.ieee.org/document/8485890
+>Abstract:
+Enabling search directly over encrypted data is a desirable technique to allow users to effectively utilize encrypted data outsourced to a remote server like cloud service provider. So far, most existing solutions focus on an honest-but-curious server, while security designs against a malicious server have not drawn enough attention. It is not until recently that a few works address the issue of verifiable designs that enable the data owner to verify the integrity of search results. Unfortunately, these verification mechanisms are highly dependent on the specific encrypted search index structures, and fail to support complex queries. There is a lack of a general verification mechanism that can be applied to all search schemes. Moreover, no effective countermeasures (e.g., punishing the cheater) are available when an unfaithful server is detected. In this work, we explore the potential of smart contract in Ethereum, an emerging blockchain-based decentralized technology that provides a new paradigm for trusted and transparent computing. By replacing the central server with a carefully-designed smart contract, we construct a decentralized privacy-preserving search scheme where the data owner can receive correct search results with assurance and without worrying about potential wrongdoings of a malicious server. To better support practical applications, we introduce fairness to our scheme by designing a new smart contract for a financially-fair search construction, in which every participant (especially in the multiuser setting) is treated equally and incentivized to conform to correct computations. In this way, an honest party can always gain what he deserves while a malicious one gets nothing. Finally, we implement a prototype of our construction and deploy it to a locally simulated network and an official Ethereum test network, respectively. The extensive experiments and evaluations demonstrate the practicability of our decentralized search 
+
+&emsp;&emsp;这是一篇利用区块链技术解决实际应用问题（可搜索加密技术）的研究文章，隶属于“区块链应用”类别。
+&emsp;&emsp;可搜索加密技术能够在云计算应用中保护数据所有者的隐私，是一项重要的密码学技术。但是可搜索加密场景中为什么需要利用区块链技术了？摘要中介绍“在可搜索加密场景中，当检测到不诚实的服务器时，没有有效的对策(例如惩罚作弊者)可用。”这句话还是不太让人明白。
+&emsp;&emsp;作者的贡献在于利用以太坊智能合约设计一种分布式的支持隐私保护的搜索方案，能够替代传统可搜索加密中的中央服务器，使数据所有者能够可靠的接收正确的搜索结果，而不必担心恶意服务器的错误行为。
+&emsp;&emsp;本文比较有趣的地方包括1点：
+&emsp;&emsp;（1）利用智能合约解决了一个实际问题，并且在以太坊官方测试网络部署。智能合约一直被称为前景广阔，但是很少看到实际的落地应用。如果这篇文章的实验具有实际可操作性，将给智能合约的学术研究和落地应用都带来启示。其次，这个智能合约在以太坊官方测试系统部署，这意味着应该能够找到此智能合约的源码和运行情况，有利于学习、测试。
+&emsp;&emsp;这篇文章将作为重点阅读论文。
+
+##3 Stochastic Models and Wide-Area Network Measurements for Blockchain Design and Analysis
+Nikolaos Papadis (Yale University, USA); Sem Borst (Nokia Bell Labs & Eindhoven University of Technology, USA); Anwar Walid (Nokia Bell Labs, USA); Mohamed Grissa (Oregon State University, USA); Leandros Tassiulas (Yale University, USA)
+https://ieeexplore.ieee.org/document/8485982
+>Abstract:
+The Blockchain paradigm provides a popular mechanism for establishing trust and consensus in distributed environments. While Blockchain technology is currently primarily deployed in crypto-currency systems like Bitcoin, the concept is also expected to emerge as a key component of the Internet-of-Things (IoT), enabling novel applications in digital health, smart energy, asset tracking and smart transportation. As Blockchain networks evolve to industrial deployments with large numbers of geographically distributed nodes, the block transfer and processing delays arise as a critical issue which may create greater potential for forks and vulnerability to adversarial attacks. Motivated by these issues, we develop stochastic network models to capture the Blockchain evolution and dynamics and analyze the impact of the block dissemination delay and hashing power of the member nodes on Blockchain performance in terms of the overall block generation rate and required computational power for launching a successful attack. The results provide useful insight in crucial design issues, e.g., how to adjust the `difficulty-of-work' in the presence of delay so as to achieve a target block generation rate or appropriate level of immunity from adversarial attacks. We employ a combination of analytical calculations and simulation experiments to investigate both stationary and transient performance features, and demonstrate close agreement with measurements on a wide-area network testbed running the Ethereum protocol.
+
+&emsp;&emsp;这是一篇研究区块链技术安全性的研究文章，隶属于“区块链安全”类别。
+&emsp;&emsp;这篇文章的关注点在于：随着区块链技术被应用到物联网领域，区块在传输和处理过程的延迟将会成为影响区块链安全的关键因素。文章通过建立随机网络模型对区块链系统的安全性进行测试和验证，研究了系统的稳态和瞬态性能特征，并在运行Ethereum协议的广域网络试验台上验证了测量结果的一致性。
+&emsp;&emsp;本文比较有趣的地方包括1点：这篇文章的作者中包括“诺基亚贝尔实验室（没错，就是历史上鼎鼎大名的贝尔实验室，2016年被诺基亚收购了母公司）”。“诺基亚贝尔实验室”在2019年的INFOCOM也发表了一篇论文“ACCEL: Accelerating the Bitcoin Blockchain for High-throughput, Low-latency Applications”，研究区块链性能提升技术。从这两篇文章看，贝尔实验室的研究方向还是集中在底层技术难点，专注于解决核心、高难度、高价值问题。
+
+##4 Understanding Ethereum via Graph Analysis
+Ting Chen (**University of Electronic Science and Technology of China (UESTC), P.R. China电子科技大学**); Yuxiao Zhu (School of Management, Guangdong University of Technology, P.R. China); Zihao Li (University of Electronic Science and Technology of China (UESTC), P.R. China); Jiachi Chen, Xiaoqi Li and Xiapu Luo (The Hong Kong Polytechnic University, Hong Kong); Xiaodong Lin (Wilfrid Laurier University, Canada); Xiaosong Zhang (University of Electronic Science and Technology of China, P.R. China)
+https://ieeexplore.ieee.org/document/8486401
+>Abstract:
+Being the largest blockchain with the capability of running smart contracts, Ethereum has attracted wide attention and its market capitalization has reached 20 billion USD. Ethereum not only supports its cryptocurrency named Ether but also provides a decentralized platform to execute smart contracts in the Ethereum virtual machine. Although Ether's price is approaching 200 USD and nearly 600K smart contracts have been deployed to Ethereum, little is known about the characteristics of its users, smart contracts, and the relationships among them. To fill in the gap, in this paper, we conduct the first systematic study on Ethereum by leveraging graph analysis to characterize three major activities on Ethereum, namely money transfer, smart contract creation, and smart contract invocation. We design a new approach to collect all transaction data, construct three graphs from the data to characterize major activities, and discover new observations and insights from these graphs. Moreover, we propose new approaches based on cross-graph analysis to address two security issues in Ethereum. The evaluation through real cases demonstrates the effectiveness of our new approaches.
+
+&emsp;&emsp;这是一篇针对区块链数据特征的研究文章，隶属于“区块链数据分析”类别。
+&emsp;&emsp;以太坊被公认为区块链2.0。这主要是由于以太坊提供了图灵完备的智能合约，使区块链技术不仅仅是一种数字货币系统，而是变成了一个分布式应用的底层环境。目前，以太坊系统上已经部署了60万个智能合约，超过5000万个以太坊账户。这些账户的所有交易操作、访问智能合约的操作都全部公开存储，这为数据分析提供了绝好的数据资源。
+&emsp;&emsp;这篇文章正是利用图分析技术对区块链中的用户特征进行分类，并用交叉图技术研究以太坊安全问题。
+&emsp;&emsp;本文比较有趣的地方包括1点：区块链数据分析很重要，但是通常认为没有什么技术深度，就是简单的启发式聚类、关联关系分析等等。这篇文章从图分析的角度开展研究，提供了一种新的思路。此外，论文提到利用“交叉图分析”技术解决了以太坊的安全问题，这个研究点是没有想到过的。
+&emsp;&emsp;这篇文章将作为重点阅读论文。
+
+
+##总结：
+&emsp;&emsp;通过对2018年和2019年的区块链论文进行了速读，能够看到区块链论文的录用比例在提升（2018年4篇，2019年7篇），这说明区块链技术正在逐渐成为主流研究方向。此外，这两年的区块链论文中中国学者的比例很好（2018年3/4，2019年3/7），体现了我国在区块链方面的研究走在世界前列。
+&emsp;&emsp;但是，相对于其他论文，中国学者的论文侧重在技术应用、数据分析等稍微上层的研究，对于底层共识机制等关键性、基础性的研究还比较少。

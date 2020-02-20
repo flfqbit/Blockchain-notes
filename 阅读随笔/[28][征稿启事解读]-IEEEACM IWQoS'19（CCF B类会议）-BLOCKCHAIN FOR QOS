@@ -1,0 +1,23 @@
+类型：IEEE和ACM联合主办的计算机网络领域的顶级学术会议之一；QOS领域的顶级会议。
+会议级别：CCF B类会议
+投稿截止时间：2019-02-20
+征稿题目：此会议主要是关于QOS主题。今年的分类中增加了区块链相关主题“BLOCKCHAIN FOR QOS”
+会议/期刊：IEEE/ACM IWQoS'19（International Workshop on Quality of Service 2019)
+官网链接：目前官网暂未公布，只有一个论文征稿链接：
+http://a2.rabbitpre.com/m/aUe1Zj5XaD?lc=5&sui=tj5ogC0k&token=HunIB-dk4EkqmzH6sAWQg_DgIkFp2GC4xVbfhH2FpmCrEN2dOwEyGW7DinxQlQK3ZuJ9ehCqRdXdqCQOGbHUa9aiYesFGIGYA2xnaFsk2Lg&from=timeline&isappinstalled=0#from=share
+
+需求分析：
+> （内容来自于百度百科）QoS（Quality of Service，[服务质量]）指一个网络能够利用各种基础技术，为指定的[网络通信]提供更好的服务能力, 是网络的一种安全机制， 是用来解决网络延迟和阻塞等问题的一种技术。在正常情况下，如果网络只用于特定的无时间限制的应用系统，并不需要QoS，比如[Web]应用，或[E-mail]设置等。但是对关键应用和多媒体应用就十分必要。当网络过载或拥塞时，QoS 能确保重要业务量不受[延迟]或[丢弃]，同时保证网络的高效运行。在[RFC]3644上有对QoS的说明。
+
+&emsp;&emsp;区块链网络对网络延迟具有较高需求。当网络延迟过高时，会导致交易、区块信息不能在网络中快速实现全网传输，有可能导致局部的数据不一致，对交易合法性验证、共识挖矿过程产生负面干扰，提高分叉的可能性。
+&emsp;&emsp;研究区块链网络服务质量问题对于提高区块链系统的健壮性和稳定性有重要作用。此外，目前已经有很多论文研究区块链网络的延迟问题。一方面，有研究表明比特币等区块链系统利用网络延迟机制来阻止网络层的追踪溯源攻击；另一方面，有研究发现日蚀攻击等针对区块链网络的攻击模式正是利用区块链网络的局部数据不一致的特性开展攻击。因此，区块链QOS方面的研究也可能涉及区块链反匿名、区块链安全等研究内容。
+
+
+
+
+
+
+
+
+
+

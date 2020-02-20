@@ -1,0 +1,23 @@
+类型：区块链专刊
+会议级别：CCF C类会议
+投稿截止时间：2019-01-15
+征稿题目：2019 ACM International Symposium on Blockchain and Secure Critical Infrastructure (BSCI 2019)
+会议/期刊：ACM ASIACCS 2019（The 14th ACM ASIA Conference on Information, Computer and Communications Security )
+官网链接：http://www.cloud-conf.net/bsci/2019/
+需求分析：侧重点是区块链在关键基础设施保护领域的研究。
+
+#摘要和分析
+>Blockchain is a decentralized transaction and data management technology that was voiced by its implementation in Bitcoin. In recent years, Blockchain has been achieving an ever-growing popularity. The reason for the interest in Blockchain is its central attributes that provide security, anonymity and data integrity without any third-party organization in control of the transactions, and therefore it is applied in numerous fields, including securing critical infrastructure.
+
+&emsp;&emsp;区块链技术能够在去中心环境下保证交易数据的安全、匿名和完整性，在众多领域都有作用，包括安全基础设施。
+
+>As technology advanced, critical infrastructures increasingly come to rely on digital control systems and networking. Attacks on critical infrastructure sites are currently a fact of life rather than a potential threat. For example, power stations, chemical plants, telecommunication stations and nuclear facilities are tempting targets to cyber-attacks.
+
+&emsp;&emsp;关键基础设施的安全性面临网络攻击的威胁。例如发电站，化工厂，电信站和核设施都曾经遭受过网络攻击。
+
+>Prior methods of protecting critical infrastructure have been plagued by centralized weaknesses and single points of failure problems. Contemporarily, Blockchain can offer cryptography for transactions and data in trustless distributed networks to enhance the reliability and resilience of the critical infrastructure. 
+
+&emsp;&emsp;现有的针对关键基础设施的保护方案一直面临中心节点缺陷和单点故障问题。而这，正好是区块链技术的优势。区块链技术的高冗余架构能够避免单点故障，即使部分节点被攻击或者被损坏，在整体系统依然能够正常运行，关键数据依然能够可靠保存。
+
+#总结
+&emsp;&emsp;**区块链技术不仅仅能够应用在金融领域。区块链技术具备的分布式安全特征有望解决传统的黑客攻击问题，提高关键基础设施的安全性。**目前，美国DAPPA、英国等研究机构已经开始研究利用区块链技术保护核弹控制系统等关键数据的安全性。这方面的研究更多的需要考虑区块链系统的安全边界，在共识机制、博弈机制、安全攻防等区块链核心机制上有更多的研究空间。

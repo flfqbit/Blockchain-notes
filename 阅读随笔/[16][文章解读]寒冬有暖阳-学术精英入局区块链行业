@@ -1,0 +1,33 @@
+&emsp;&emsp;2018年8月2日，姚期智院士作为作者之一，在 arxiv.org 署名发表区块链论文（Scaling Nakamoto Consensus to Thousands of Transactions per Second）论文，提出 Conflux 共识机制。
+&emsp;&emsp;论文链接：https://arxiv.org/pdf/1805.03870.pdf
+&emsp;&emsp;2018年11月11日，姚期智院士在arxiv.org发布最新论文“An Incentive Analysis of some Bitcoin Fee Designs”。
+&emsp;&emsp;论文链接：https://arxiv.org/abs/1811.02351
+&emsp;&emsp;2018年12月4日，姚期智参与创立的区块链项目 Conflux ，宣布获得 3500 万美元融资，估值超过 4 亿美元。本轮融资投资方包含红杉中国、F2Pool、火币资本、Metastable 和 IMO Ventures 等。另据悉该项目在国内亦设有实体公司，名为清红微谷技术开发有限责任公司，注册于北京。
+&emsp;&emsp;文章链接：http://fortune.com/2018/12/04/conflux-blockchain/
+
+&emsp;&emsp;这两条消息代表了又一位图灵奖得主入局区块链行业。此前，2012年图灵奖得主SilvioMicali领导的Algorand区块链项目已经获得6200万美元融资。
+&emsp;&emsp;这两位图灵奖得主的区块链项目都是针对区块链共识协议进行改进，期望从根本上改变现有区块链技术效率低下的问题。其中，Micali教授声称Algorand协议能够破解区块链的“不可能三角理论”——即区块链在扩展性、安全性、去中心上三者不可兼得。而姚期智院士的新项目Conflux的核心是基于有向无环图（DAG）概念的排序算法避免分叉问题，先決定所有区块的整体排序，再決定衍生的交易排序。这将打破现有系统（如比特币和以太坊）的可扩展性限制，同时提供强大的安全保障。
+&emsp;&emsp;区块链的核心是密码技术和共识机制。而共识机制本质上是解决分布式环境下的群体博弈问题。这些领域都是这类大神的研究领域。SilvioMicali从1983年起担任麻省理工学院电子工程和计算机科学部门的计算机科学教授，主要研究密码学和信息安全的理论。姚期智的研究方向包括计算理论及其在密码学和量子计算中的应用，最先提出量子通信复杂性，提出分布式量子计算模式，后来成为分布式量子算法和量子通讯协议安全性的基础。
+&emsp;&emsp;**学术精英的入局代表了区块链行业广阔的发展潜力。但是也从另一个角度宣告了一个时代的结束，区块链底层技术的研究赛道已经涌入了人类最顶尖的学者，还在从事区块链架构设计的创业公司得抓紧时间了。**
+
+
+以下是对第3篇文章的摘要和分析
+
+source:	http://fortune.com/2018/12/04/conflux-blockchain/
+title：A Faster Bitcoin? Conflux Raises $35 Million from Chinese Web Giants for New Blockchain Protocol
+
+
+>While so-called private blockchains have overcome these scaling problems, they are able to do so by relying on a central authority—something that is anathema to those who favor the decentralized creed of Bitcoin. Conflux, however, claims to offer the best of both worlds, namely speed and decentralization. The company describes the technical features in a press release:
+
+&emsp;&emsp;**由于公链技术的低性能，联盟链成为了大部分企业用户的选择。但是，联盟链通常是通过依赖中心机构来实现高性能的。这种妥协机制能否在实际应用中有效运行还值得观察。Conflux背后的DAG技术能否给企业区块链领域带来新的发展路径，值得观察。**
+
+
+>“Contrary to popular belief, true decentralization isn’t sacrificed to increase throughput, highlighting Conflux as the first example that achieves the best of both worlds. By weaving a Directed Acylic Graph data structure into Conflux’s Proof of Work consensus algorithm, tests on its testnet has achieved a throughput of at least 6,500 Transactions Per Second (TPS), while supporting at least 20,000 nodes,” said the release.
+
+&emsp;&emsp;去中心化和高性能一直被认为很难同时实现。DAG架构将同时满足这两种特点。奇妙的是，**DAG架构的核心思路正是来源于比特币链式结构的困境：在传统比特币中，由于采用最长链机制，导致一个悖论，提高性能的直接方法是提高出块速度，但是出块速度越快，将越容易导致分叉，进而降低效率。**
+&emsp;&emsp;DAG的解决思路是，既然产生分叉，就利用分叉实现并行处理，最终通过有向图思路保持数据一致性。
+&emsp;&emsp;还记得数据结构课程中，链式结构还是比较简单易懂，图结构就很难懂了。但是图在很多领域显然是比链式结构有优势的。改变世界的人还是需要更变态一些（看完链式结构就放弃的同学苦笑）。。
+
+>As a result, Long says, smart contracts will move beyond their current uses—namely gambling and “initial coin offerings“—and become a force in the finance and insurance industries.
+
+&emsp;&emsp;智能合约一定是有广阔前景的，当前制约智能合约发展的效率问题、安全问题都将被大神解决，我们做好DAPP的实用性研究就好了。

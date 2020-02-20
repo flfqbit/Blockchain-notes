@@ -1,0 +1,85 @@
+&emsp;&emsp;稳定币是数字货币资产和现实资产之间的桥梁，对于促进数字资产的交换和利用有重要意义。然而早期的稳定币由于缺乏监管一直存在争议，例如占据稳定币市场90%份额的USTD一直被质疑存在超发现象。
+&emsp;&emsp;2018年9月，首批受政府监管的稳定币（GUSD,PAX）发行，给稳定币市场带来了新的选择。GUSD和PAX是由NYSDF（纽约金融服务局）批准发行，这是首批由**重点国家**金融监管机构批准运行的稳定币。两种代币都采用了法币抵押模式，即**每存储一个美元，则发行一个稳定币**，从而保证市场上流通的稳定币具有稳定的价值抵押。相对于之前的稳定币，这两种稳定币不仅获得了政府监督机构的批准，而且公开了稳定币发行、抵押物管理、审计机制都全流程信息，使其公信力显著提升。表1展示了这两种稳定币公信力的来源。
+||简介|GUSD|PAX|
+|:------|:------|:------|:------|
+|发行机构|负责稳定币项目运行的实体机构|Gemini 信托公司|Paxos信托公司|
+|批准机构|国家金融监管机构对稳定币项目进行审核批注	|纽约金融服务厅|纽约金融服务厅|
+|抵押物管理机构|负责存储用于抵押的法币资产|道富银行（State Street）|FDIC投保的美国银行|
+|审计机构|负责审计稳定币项目是否按照规定运行|BPM会计师事务所|Withum会计师事务所|
+|代码安全检测机构|负责检测稳定币核心代码的安全性|	Trail of Bits公司审查了代码的安全性||
+|运营机构|负责稳定币的购买、赎回等日常运营|Gemini公司自营的Gemini数字货币交易|Paxos公司自营的itBit数字货币交易所|
+表1 GUSD和PAX的运行架构
+
+&emsp;&emsp;如表1所示，这两种稳定币项目都有非常清晰的信任机制。发行机构都是在美国注册的实体企业，能够避免过去几年频繁发生的数字货币发行方跑路的问题；批准机构是美国金融机构，能够避免政策风险；抵押物管理机构都是美国的知名银行，确保资金管理合规、安全；审计机构都是第三方知名会计师事务所，确保审计可靠；代码安全检测机构的引入能够降低代码漏洞带来的风险；运营机构是发行方旗下的数字货币交易所，这保证了稳定币购买和赎回渠道有基础性保证。
+&emsp;&emsp;正是由于具备清晰的运行机制，这两种稳定币被认为具有较高公信力。截止到目前，这两种稳定币已经运行了4个月。**它们进展如何？是否能够取代USTD的领导地位？它们是否按照规定运行？审计机构能否起到有效监管作用？这是我非常关注的内容**。
+
+&emsp;&emsp;本文章搜集了这两种稳定币的审计报告，从报告中观察进展情况。截止到2018年12月11日，这两种稳定币都发布了3次审计报告。从中提取抵押物和发行量的数据，如表2所示。
+||GUSD|GUSD|PAX|PAX|
+|:------|:------|:------|:------|:------|
+|日期|美元储备数量|发行数量|美元储备数量|发行数量|
+|2018-0928|3,622,045.75 USD|3,622,045.75 GUSD|14,644,074.19USD|14,644,074,19PAX|
+|2018-1031|10,512,758.91 USD|10,512,758.91 GUSD|	109,307,012.75 USD|109,307,012.75 PAX|
+|2018-1130|42,776,968.43 USD|42,776,968.43 GUSD|161,927,704.55 USD|161,927,704.55 PAX|
+表2 GUSD和PAX的发行数量和抵押物数量
+
+&emsp;&emsp;首先，可以看出每次报告中抵押物和稳定币的数量是一一对应的，这说明两种稳定币都严格采用法币抵押物模式，即每收到1美元抵押，即发行1个稳定币。
+&emsp;&emsp;其次，这两种稳定币的发行量都在稳定增长。目前稳定币市场规模约20亿美元，这两种新型稳定币的市值比例已经超过10%（GUSD占比2%；PAX占比8%）。
+&emsp;&emsp;GUSD和PAX每个月都会公布由第三方审计事务所出具的审计报告，证明稳定币的发行过程满足事先约定。两种稳定币的审计报告都可以从官网获得。
+&emsp;&emsp;GUSD稳定币报告链接：https://gemini.com/dollar/
+&emsp;&emsp;PAX稳定币报告链接：[https://www.paxos.com/](http://www.baidu.com/link?url=RuQV26UxtqNVPkHTPt43Dl3uc7WnVIOK5TUyCt2rv07)standard/attestations/
+&emsp;&emsp;通过观察，不同月份的审计报告大部分内容都是相同的，更改部分主要是当前稳定币的发行数量和账户中的美元数量。
+&emsp;&emsp;此处对GUSD11月份公布的报告进行摘要和分析。
+
+![图1 审计报告首页](https://upload-images.jianshu.io/upload_images/4794066-a16d59f0f068bd4a.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+&emsp;&emsp;报告的首页列出审计事务所的名称“BPM”（BPM会计师事务所是美国加州最大的会计、税务和资讯公司之一，也是美国五十强及西海岸十强事务所之一），审计内容“Gemini Dollar and Cash Balances”（强调本审计报告只针对Gemini公司的美元和稳定币数量进行审计），审计时间“2018-1130”（GUSD的报告通常实在月底发布）。
+&emsp;&emsp;审计报告的正文包括3个章节：
+
+#Section I — Independent Accountants’ Report 
+>The management of Gemini Trust Company, LLC (the “Company”) has made an assertion (the “Management Assertion”) in the accompanying report titled “Management Report on Gemini Dollar and Cash Balances” (the “Management Report”). BPM LLP (“BPM” or “we”) has examined the Management Assertion, based on the criteria described in the Management Report, to determine if the Management Assertion is fairly stated in all material respects.
+
+翻译：双子座信托有限责任公司(Gemini Trust Company)的管理层在题为“双子座美元管理报告”的报告中作出“管理主张”（“Management Assertion”）。BPM LLP公司检查了此“管理主张”（“Management Assertion”），并根据管理报告中描述的标准断言来判断这些“管理主张”是否被公正执行。
+
+>The Company’s management is responsible for the Management Report and the Management Assertion, including (i) their preparation, completeness, accuracy, and method of presentation; (ii) the identification  of risks that would prevent the  Management Assertion from being met; and (iii) the design and implementation of internal controls relevant to the Management Assertion. Our responsibility is to express an opinion on the Management Assertion based on our examination.
+  
+翻译：公司管理层对报告及报告中的“管理主张”负有责任，包括（1）准备、完整性、准确性和陈述方法;（2）识别将阻止管理断言得到满足的风险;（3）与管理主张相关的内部控制的设计和实现。BPM的责任是在审查的基础上对管理层的主张发表意见。
+
+>Our examination was conducted in accordance with attestation standards established by the American Institute of Certified Public Accountants. Those standards require that we plan and perform the examination to obtain reasonable assurance about whether the Management Assertion is fairly stated in all material respects. An examination involves performing procedures to obtain evidence about the Management Assertion. The nature, timing, and extent of the procedures selected depend on our judgment, including an assessment of the risks of material misstatement of the Management Assertion, whether due to fraud or error. We believe that the evidence we obtained is sufficient and appropriate to provide a reasonable basis for our opinion.
+
+翻译：BPM将按照美国注册会计师协会制定的认证标准开展检查。这些标准要求我们计划并执行检查以便确定管理层是否在所有方面满足“管理主张”。检查内容主要是通过采取步骤来获得有关“管理主张”的证据。 基于我们的判断，我们选择了检查程序的性质、时间和范围，包括对管理层声明的重大错报风险的评估，无论是由于欺诈还是错误。我们认为，我们获得的证据是充分和适当的，能够为我们的意见提供合理的依据。
+
+>We did not perform any procedures regarding the operating effectiveness of the Company’s internal  controls, nor did we perform procedures relating to the background information provided by the Company  accompanying this report (the “Independent Accountants’ Report”). Accordingly, we do not express an opinion thereon.
+
+翻译：我们没有执行任何关于公司内部控制运行有效性的程序，也没有执行与本报告所附公司提供的背景信息(“独立会计师报告”)有关的程序。因此，我们不就此发表意见。
+
+>In our opinion, the Management Assertion referred to above is fairly stated in all material respects, as of November 30, 2018 at 3:08 pm Eastern Time.
+
+翻译：我们认为，上述“管理主张”在所有方面都是公正的，截至2018年11月30日东部时间下午3:08。
+
+>This Independent Accountants’ Report is intended solely for the information and use of the Company and the holders of Gemini dollars and is not intended to be, and should not be used by anyone other than these specified parties.
+
+翻译：本独立会计师报告仅供本公司和双子座美元持有人参考和使用，不打算也不应由上述指定方以外的任何人使用。
+
+# Section II --Management Report on Gemini Dollar and Cash Balances
+
+![图2 抵押物和发行量的审计结果](https://upload-images.jianshu.io/upload_images/4794066-630bca5f33267007.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+&emsp;&emsp;图2 展示了审计报告第二部分的核心内容，即通过检查，BPM公司给出审计结果：截止到2018年11月30日3：08PM，gemini公司在以太坊中发行的Gemini Dollars(GUSD)的数量没有超过gemini公司账号中的美元数量。
+
+![图3 审计数据来源](https://upload-images.jianshu.io/upload_images/4794066-3d3a8985f8bf6a39.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+&emsp;&emsp;图3展示了BPM公司在检查时依赖数据的来源。其中，Gemini Dollars(GUSD)的数量来自于网站https://etherscan.io/(这是一个广泛使用的以太坊浏览器，能够查询以太坊数字货币的发行量等信息)；美元的数量来自于道富银行（State Street）及其他可信公司。
+
+#Section III --Background Inoformation Provided by Gemini Trust Company,LLC
+![图4 Gemini公司的背景](https://upload-images.jianshu.io/upload_images/4794066-f18591784fa51500.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+&emsp;&emsp;图4 介绍了 Gemini公司的背景信息。主要内容包括：
+&emsp;&emsp;（1）GUSD的发行方Gemini是美国纽约的可信公司；
+&emsp;&emsp;（2）GUSD和美元的比例严格设置为1：1；
+&emsp;&emsp;（3）GUSD按照ERC20协议的标准部署在以太坊网络上；
+&emsp;&emsp;（4）GUSD通过结合区块链技术和政府监管的双重优势，能够实现高信誉和价格稳定性；
+&emsp;&emsp;（5）Gemini是美国纽约的可信公司，受到NYDFS的监管；
+&emsp;&emsp;（6）2018年9月9日，Gemini公司收到NYDFS的批准，发行Gemini Dollar(GUSD)；
+&emsp;&emsp;（7）公司负责用于控制GUSD智能合约的密钥。
+
+
+#总结：
+&emsp;&emsp;通过阅读审计报告，可以发现审计报告的内容非常严谨，审计方将审计内容严格限制在GUSD发行量和美元余额是否匹配的数值比较问题上，使审计内容变得简单可执行。此外，在GUSD发行量的数据来源上，审计方选择第三方以太坊浏览器https://etherscan.io/作为数据来源，避免了区块链底层技术的复杂性。特别是在第三章节介绍Gemini公司背景信息时，审计报告特别标注此部分数据未经审计。这体现了审计公司的专业性。
+&emsp;&emsp;通过对GUSD的审计报告进行解读，我认为这种依靠监管机构背书、依靠第三方审计机构增信的模式具有很高的可行性。**区块链技术负责链上数据可信，传统的基于监管和审计的技术负责链下数据可信。两者结合使用才能充分发挥各自的优势，实现有效的落地应用**。
